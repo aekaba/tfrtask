@@ -7,8 +7,6 @@ import 'package:tfr/Feature/Login/Model/Login_Model.dart';
 import 'package:tfr/Product/Model/token_model.dart';
 
 class LoginService {
-  LoginService();
-
   final dio = Dio();
   Future<TokenModel?> login(LoginModel model) async {
     final baseurl = dotenv.env['BASEURL'];
