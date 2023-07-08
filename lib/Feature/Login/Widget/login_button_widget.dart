@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tfr/Feature/Login/Cubit/login_cubit.dart';
 import 'package:tfr/Feature/Login/Cubit/login_cubit_state.dart';
-import 'package:tfr/Feature/Home/View/main_view.dart';
+import 'package:tfr/Feature/Home/View/home_view.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({

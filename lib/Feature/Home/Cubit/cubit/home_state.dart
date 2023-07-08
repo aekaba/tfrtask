@@ -1,10 +1,13 @@
 part of 'home_cubit.dart';
 
-abstract class HomeState extends Equatable {
-  const HomeState();
+class HomeState extends Equatable {
+  const HomeState(
+      {this.isCompleted = false, this.isLoading = false, this.oldOrders});
+
+  final bool isLoading;
+  final OldOrders? oldOrders;
+  final bool isCompleted;
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [isLoading];
 }
-
-class HomeInitial extends HomeState {}

@@ -77,10 +77,10 @@ class PopulatedOrder {
   String? deliverDate;
   String? pickupDate;
   int? driverCount;
-  int? tipFromTfr;
+  double? tipFromTfr;
   String? file;
   String? noteForDriver;
-  int? extraTipFromTfr;
+  double? extraTipFromTfr;
   double? tipFromRestaurant;
   double? extraTipFromRestaurant;
   PopulatedRestaurant? populatedRestaurant;

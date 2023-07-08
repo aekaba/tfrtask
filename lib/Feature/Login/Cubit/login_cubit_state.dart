@@ -13,5 +13,6 @@ class LoginState extends Equatable {
       this.isLoading = false,
       this.isWrong = false});
 
+  @override
   List<Object?> get props => [isLoading];
 }
