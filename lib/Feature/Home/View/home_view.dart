@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-
 import 'package:tfr/Feature/Home/Cubit/cubit/home_cubit.dart';
 import 'package:tfr/Feature/Home/Service/home_service.dart';
 
@@ -31,14 +30,11 @@ class MainView extends StatelessWidget {
                 return ListView.builder(
                   itemCount: state.oldOrders?.count,
                   itemBuilder: (BuildContext context, int index) {
-                    DateTime thsDate = myDateFormatter(state
-                        .oldOrders!.results![index].populatedOrder!.deliverDate
-                        .toString());
                     return Padding(
                       padding: const EdgeInsets.only(top: 8, right: 4, left: 4),
                       child: Card(
                         child: Container(
-                          height: MediaQuery.of(context).size.height * .2,
+                          height: MediaQuery.of(context).size.height * .18,
                           margin: const EdgeInsets.all(8),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,11 +46,9 @@ class MainView extends StatelessWidget {
                                 style: Theme.of(context).textTheme.titleLarge,
                               ),
                               Text(
-                                "${thsDate.day}/${thsDate.month}/${thsDate.year}",
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
-                              Text(
-                                "${thsDate.hour}:${thsDate.minute}",
+                                myDateFormatter(state.oldOrders!.results![index]
+                                    .populatedOrder!.deliverDate
+                                    .toString()),
                                 style: Theme.of(context).textTheme.titleMedium,
                               ),
                               SizedBox(
@@ -115,7 +109,7 @@ class MainView extends StatelessWidget {
   }
 }
 
-DateTime myDateFormatter(String encDate) {
-  print(DateTime.parse(encDate));
-  return DateTime.parse(encDate);
+String myDateFormatter(String encDate) {
+  DateTime date = DateTime.parse(encDate);
+  return DateFormat.yMd().add_jm().format(date);
 }

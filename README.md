@@ -1,16 +1,24 @@
-# tfr
+# TFR Case
 
-A new Flutter project.
+---
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+   ```
+   First of all, correctly configure the Flutter development environment on your machine,
+   see https://flutter.dev/docs/get-started/install
+   
+   - Clone this repository:
+   $ git clone https://github.com/aekaba/tfrtask tfrtask
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   - Enter in directory:
+   $ cd tfrtask
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   - For install dependencies:
+   $ flutter pub get
+
+   - Run the app: 
+   $ flutter run
+   ```
+
+---
